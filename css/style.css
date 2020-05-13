@@ -5,27 +5,61 @@
 }
 
 body {
-  background-color: rgba(11, 10, 13, 0.9);
   font-family: Helvetica, Arial, sans-serif;
   color: #fff;
   background-size: auto 100vh;
+  height: 50vh;
+  background-image: url('../img/background.jpg');
+  font-size: 10px;
+}
+
+/* Se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  header {
+    font-size: 15px;
+  }
+}
+
+header {
   height: 100vh;
-  background-image: url('https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png') 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  header {
+    height: 50vh;
+  }
 }
 
 h1::first-letter {
   color: #61dafb;
-  font-size: 80px;
+  font-size: 3em;
 }
 
 .menu{
   background-color: #61dafb;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  padding: 10px 20px;
+  display: block;
+}
+
+.menu:hover {
+  background-color: #000;
+}
+
+.menu a:hover {
+  background-color: #61dafb;
 }
 
 /*selector hierárquico*/
@@ -43,8 +77,44 @@ h1::first-letter {
 .site-subtitle,
 .site-title {
   text-align: center;
+  font-size: 3em;
 }
 
 .site-subtitle {
   font-style: italic;
+}
+
+/*Configurando as imagens*/
+
+section {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.img-portfolio {
+  height: 250px;
+}
+
+.test {
+  color: #61dafb;
+  font-style: italic;
+}
+
+.container-skills {
+  display: none;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.span-skills {
+  border: solid 3px #61dafb ;
+  margin: 0 15px;
 }
